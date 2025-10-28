@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "MUI Table Sum Helper",
+  "version": "1.0",
+  "description": "Automatically calculate column sums in Material UI tables (handles currency, commas, and dots).",
+  "permissions": ["scripting", "activeTab", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
